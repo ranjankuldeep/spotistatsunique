@@ -18,10 +18,10 @@ exports.getSingleTrack = (req, res) => {
         const data = track.data;
         const senddata=[
           {
-            title:data.album.name,
-            id:data.album.id,
-            album_id:1,
-            url:data.album.images[0].url
+            'title':data.album.name,
+            'id':data.album.id,
+            'album_id':1,
+            'url':data.album.images[0].url
           }
         ];
           console.log(data.album.name)
