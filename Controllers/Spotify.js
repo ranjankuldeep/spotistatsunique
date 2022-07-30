@@ -22,7 +22,6 @@ exports.getSingleTrack = (req, res) => {
             'id':data.album.id,
             'album_id':1,
             'url':data.album.images[0][0]
-
           }
         ];
           console.log(data.album.name)
