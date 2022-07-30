@@ -6,6 +6,7 @@ const token=require('../Util/refreshtoken')
 const clientID = process.env.CLIENTID;
 const clientSecret = process.env.CLIENTSECRET;
 const fs=require('fs');
+const PORT=process.env.PORT || 3000;
 
 passport.serializeUser(function (user, done) {
 
@@ -26,7 +27,7 @@ passport.use(
     {
       clientSecret,
       clientID,
-      callbackURL: "/auth/login/spotify/redirect"
+      callbackURL: "https://spotistatsunique.herokuapp.com/auth/login/spotify/redirect"
     },
     (AcessToken, RefreshToken, Profile, done) => {
       console.log(RefreshToken)
