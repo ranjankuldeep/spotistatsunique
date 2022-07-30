@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.18",
+    "passport": "^0.5.3",
+    "passport-spotify": "^2.0.0",
+    "querystring": "^0.2.1"
+  },
+  "name": "spotistatskkuldeep",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
