@@ -13,10 +13,11 @@ router.get('/login/spotify', passport.authenticate('spotify',{
     scope: ['user-read-email', 'user-read-private','user-read-recently-played','user-top-read','user-follow-read','user-library-read','playlist-read-private'],
    showDialog:true
   }),(req,res)=>{
-    //final function after authenticated
+  
   });
 
 router.get('/login/spotify/redirect',passport.authenticate('spotify'),(req,res)=>{
+    res.send(req.user)
     res.redirect('/profile');
 })
 
