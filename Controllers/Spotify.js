@@ -17,7 +17,7 @@ exports.getSingleTrack = (req, res) => {
       .then((track) => {
         const data = track.data;
         const senddata=[];
-          console.log(data.album)
+          console.log(data.album.name)
         res.status(200).json({ data: data });
         console.log(track.data);
       })

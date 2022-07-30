@@ -17,7 +17,6 @@ router.get('/login/spotify', passport.authenticate('spotify',{
   });
 
 router.get('/login/spotify/redirect',passport.authenticate('spotify'),(req,res)=>{
-    res.status(200).json(req.user)
     res.redirect('/profile');
 })
 
