@@ -6,6 +6,7 @@ console.log(baseAdress);
 const fs = require("fs");
 
 exports.getSingleTrack = (req, res) => {
+  console.log(req)
   fs.readFile("./.spotify-token", (err, token) => {
     axios
       .get(`${baseAdress}/v1/tracks/3F7pBlPDi2jfr7f6NoeXeL`, {
