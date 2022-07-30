@@ -16,9 +16,17 @@ exports.getSingleTrack = (req, res) => {
       })
       .then((track) => {
         const data = track.data;
-        const senddata=[];
+        const senddata=[
+          {
+            'title':data.album.name,
+            'id':data.album.id,
+            'album_id':1,
+            'url':data.album.images[0][0]
+
+          }
+        ];
           console.log(data.album.name)
-        res.status(200).json({ data: data });
+        res.status(200).json(senddata);
         console.log(track.data);
       })
       .catch(function err(err) {
