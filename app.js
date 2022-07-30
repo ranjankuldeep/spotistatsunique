@@ -35,11 +35,12 @@ app.get('/', (req,res)=>{
 app.use('/auth',authroutes);
 app.use(profileroutes);
 app.use('/spotify',spotifyroutes);
+const PORT = process.env.PORT || 3000;
 mongoose
   .connect(MONGODB_URI)
   .then((result) => {
     console.log("connected to the database");
-    app.listen(3000,()=>{
+    app.listen(PORT,()=>{
             console.log('App is listening on the port 3000');
         });
   })
