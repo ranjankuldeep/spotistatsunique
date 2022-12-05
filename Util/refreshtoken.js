@@ -1,2 +1,2 @@
-const token=[]
-module.exports=token;
+const token = [];
+module.exports = token;
